@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nama</title>
+    <link rel="stylesheet" href="css/styleGlavni.css">
+    <link rel="stylesheet" href="css/styleAbout.css">
+    <!-- Učitavanje jQuery biblioteke za dodatnu funkcionalnost -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- HEADER - Zaglavlje stranice -->
+    <div class="header">
+        <!-- Naslov zaglavlja koji pokreće funkciju 'glavnaStrana()' kad se klikne -->
+        <h3 id="imeheader" onclick="glavnaStrana()">Pizzerija Italija</h3>
+        <nav>
+            <button class="hamburgermeni"></button>
+            <!-- Navigacioni meni -->
+            <ul vidljivost="false" id="navigacioni-bar" class="navigacioni-bar-klasa">
+                <li><a href="index.html" id="prvinav">Početna strana</a></li>
+                <li><a href="nasaPonuda.html" id="druginav">Naša Ponuda</a></li>
+                <li><a href="porudzbina.html" id="trecinav">Poručite</a></li>
+                <li><a href="onama.html" id="cetvrtinav">O nama</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- SLIKA FULLSCREEN - Prikazuje sliku u punom ekranu sa mogućnošću zatvaranja -->
+    <div class="velikaSlika" id="velikeSlikeBox">
+        <img src="media/kapricoza.jpg" alt="1.slika" id="velikaSlika">
+        <span onclick="zatvoriSliku()">X</span>
+    </div>
+
+    <!-- GLAVNI TEXT - O stranici i kontakt informacije -->
+    <div class="naslov">
+        <h1>O nama</h1>
+
+        <!-- KONTAKT INFORMACIJE - Klikom se menja boja tekstualnih informacija -->
+        <div id="kontakt" onclick=RGBcolor()>
+            <h2>Kontakt</h2>
+            <p>"Pizzerija Italija" D.O.O. Vračar</p>
+            <p>PIB: 105428306</p>
+            <p>Adresa: Mileševska 2, Vračar, 11000 Beograd</p>
+            <p>Radno vreme: 09:00-23:00 svaki dan </p>
+            <p>Broj telefona: +381603334445</p>
+            <p>E-pošta: pizzaitalija@gmail.com</p>
+        </div>
+    
+        <div class="glavnitxt">
+            <p>Matija Čubelić, Lazar Čadjenović i Antonio Tripović su trojica prijatelja koji su se upoznali tokom studija u Beogradu, ali su dolazili iz različitih krajeva. Matija je odrastao u Beogradu, dok je Lazar proveo detinjstvo pored mora, gde je razvio ljubav prema mediteranskoj kuhinji. Antonio, strastveni putnik, često je istraživao kulinarske tradicije različitih zemalja, a Italija je postala njegova omiljena destinacija.</p>
+            <img src="media/pizzerija.jpg" alt="prvi lokal" class="slika" onclick="otvoriSliku(this.src)">
+            <p>Njihova zajednička strast prema hrani, posebno prema pici, navela ih je da pokrenu zajednički posao. Matija je, zahvaljujući svom beogradskom poreklu, imao duboko razumevanje lokalnih ukusa i potreba tržišta. Lazar je doneo autentične mediteranske recepte, a Antonio je obogatio njihovu ponudu specijalitetima koje je otkrio na svojim putovanjima po Italiji.</p>
+            <p>Godine 2023. odlučili su da osnuju Pizzeriju Italija u Mileševskoj ulici broj 2 na Vračaru. Picerija je postala poznata po jedinstvenom spoju autentičnih italijanskih recepata i lokalnog beogradskog šarma. Matija je preuzeo ulogu glavnog kuvara, fokusirajući se na pravljenje savršeno pečenih pica sa svežim sastojcima. Lazar je, s ljubavlju prema moru, unio mediteranski duh u ambijent picerije, dok je Antonio, sa svojim iskustvom i znanjem, vodio marketing i poslovanje, osiguravajući da Pizzerija Italija brzo postane jedno od omiljenih mesta za gurmane u Beogradu.</p>
+            <p class="glavnitxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quos id culpa esse quas laborum vero, impedit est dolores debitis quasi sequi praesentium a odio doloremque quis velit saepe libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aut quaerat reprehenderit illo. Ipsam, dolores nulla ex quod repellat pariatur, exercitationem ab earum quaerat, eligendi praesentium ea doloremque facilis nisi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dolorem ut beatae id, facere ex fuga laborum fugiat officia, vel praesentium, obcaecati qui neque unde? Eos asperiores dignissimos voluptatem quidem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia dicta iure, atque veniam sed a harum corrupti dolorem provident voluptatem cupiditate veritatis illo delectus libero voluptates autem fuga adipisci itaque!</p>
+        </div>
+
+        <!-- DUGME KOJE VRACA NA VRH STRANE - Dugme za vraćanje na vrh stranice -->
+        <div class="dugmici">
+            <button class="button dugme" onclick="vrhStranice()">Kliknite da se vratite na vrh stranice</button>
+        </div>
+    </div>  
+
+    <!-- FOOTER - Podnožje stranice -->
+    <div class="footer">
+        <div id="fp1" class="footertekst">
+            <p>Pizzerija Italija<br>
+                Beograd, Vračar, Mileševska 2<br>
+                Radno Vreme: 9-23h</p>
+        </div>
+        <div id="fp2" class="footertekst">
+            <!-- Linkovi ka društvenim mrežama -->
+            <p><a href="https://www.facebook.com" target="_blank">Fejsbuk Stranica</a><br>
+            <a href="https://www.instagram.com" target="_blank">Instagram Stranica</a><br>
+        </div>  
+    </div>
+
+    <!-- POZIV JS FAJL - Učitavanje JavaScript fajla za dodatnu funkcionalnost -->
+    <script src="js/script.js"></script>
+</body>
+</html>

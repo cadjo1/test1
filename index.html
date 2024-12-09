@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naslovna strana</title>
+    <meta name="description" content="Ovaj sajt je napravljen u svrhu domaceg zadatka iz predmeta Elektronsko Poslovanje">
+    <meta name="keywords" content="EPOS, Domaci, Ovo, Sluzi, za, SEO">
+    <link rel="stylesheet" href="css/styleGlavni.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <!-- Učitavanje jQuery biblioteke -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon"> 
+</head>
+<body>  
+
+    <!-- HEADER - Zaglavlje stranice -->
+    <div class="header">
+        <!-- Naslov zaglavlja koji pokreće funkciju 'glavnaStrana()' kad se klikne -->
+        <h3 id="imeheader" onclick="glavnaStrana()">Pizzerija Italija</h3>
+        <nav>
+            <button class="hamburgermeni"></button>
+            <!-- Navigacioni meni -->
+            <ul vidljivost="false" id="navigacioni-bar" class="navigacioni-bar-klasa">
+                <li><a href="index.html" id="prvinav">Početna strana</a></li>
+                <li><a href="nasaPonuda.html" id="druginav">Naša Ponuda</a></li>
+                <li><a href="porudzbina.html" id="trecinav">Poručite</a></li>
+                <li><a href="onama.html" id="cetvrtinav">O nama</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- NASLOV, TEKST I LINK DUGMICI -->
+    <div class="naslov">
+        <h1> Pizzerija Italija</h1>
+        <p class="glavnitxt">Dobrodošli u našu piceriju, mesto gde se strast prema autentičnim italijanskim receptima susreće sa domaćom toplinom i gostoprimstvom. Svaka pica je pripremljena sa pažljivo biranim sastojcima, od svežeg testa koje sami mesimo, do kvalitetnih sireva i domaćih prelivâ. Bilo da želite klasičnu Margheritu, hrskavu Capricciosu ili neku našu specijalnu kreaciju, kod nas ćete uvek pronaći ukus koji osvaja sva čula. Dođite i uverite se zašto je naša picerija omiljeno mesto za sve ljubitelje prave pice. </p>
+        <!-- Linkovi za navigaciju -->
+        <div class="dugmici">
+            <a href="nasaPonuda.html" class="button dugme">Pogledajte našu ponudu</a>
+            <a href="porudzbina.html" class="button dugme" >Napravite porudžbinu</a>
+            <a href="onama.html" class="button dugme">O nama</a>
+        </div>
+    </div>
+
+    <!-- VIDEO POZADINA -->
+    <div class="videopozadina">
+        <!-- Video pozadina koja se automatski reprodukuje i ponavlja -->
+        <video muted autoplay loop id="pozadinavideo">
+        <source src="media/pozadina.mp4" type="video/mp4">
+        </video>    
+    </div>
+
+    <!-- DUGME ZA PAUZU VIDEA -->
+    <input type="button" value="Pauzirajte video" id="pauza">
+    
+    <!-- FOOTER - Podnožje stranice -->
+    <div class="footer">
+        <div id="fp1" class="footertekst">
+            <p>Pizzerija Italija<br>
+            Beograd, Vračar, Mileševska 2<br>
+            Radno Vreme: 9-23h</p>
+        </div>
+        <div id="fp2" class="footertekst">
+            <!-- Linkovi ka društvenim mrežama -->
+            <a href="https://www.facebook.com" target="_blank">Fejsbuk Stranica</a><br>
+            <a href="https://www.instagram.com" target="_blank">Instagram Stranica</a><br>
+        </div>  
+    </div>
+
+    <!-- JAVASCRIPT REFERENCE -->
+    <!-- Učitavanje JavaScript fajlova -->
+    <script src="js/script.js"></script>
+    <script src="js/dugmePauza.js"></script>
+    
+</body>
+</html>
